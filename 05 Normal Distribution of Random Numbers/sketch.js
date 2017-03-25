@@ -6,13 +6,35 @@ function setup () {
 
 
 function draw () {
-  var num = randomGaussian();
-  var sd = 60;
-  var mean = 320;
+  var xPosNum = randomGaussian();
+  var xPosSd = 80;
+  var xPosMean = 320;
   // Multiply the standard deviation and add the mean
-  var x = sd * num + mean;
+  var x = xPosSd * xPosNum + xPosMean;
+
+  var yPosNum = randomGaussian();
+  var yPosSd = 45;
+  var yPosMean = 180;
+  // Multiply the standard deviation and add the mean
+  var y = yPosSd * yPosNum + yPosMean;
+
+  var rNum = randomGaussian();
+  var rSd = 100;
+  var rMean = 253;
+  var r = rSd * rNum + rMean;
+
+  var gNum = randomGaussian();
+  var gSd = 100;
+  var gMean = 23;
+  var g = gSd * gNum + gMean;
+
+  var bNum = randomGaussian();
+  var bSd = 100;
+  var bMean = 110;
+  var b = bSd * bNum + bMean;
+
 
   noStroke();
-  fill(255, 10);
-  ellipse(x, 180, 16, 16);
+  fill(r, g, b, 10);
+  ellipse(x, y, 16, 16);
 }
